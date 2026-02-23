@@ -1,4 +1,7 @@
-from src.gilded_rose import Item, GildedRose
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
+
+from gilded_rose import Item, GildedRose
 
 
 def test_crear_aged_brie():
@@ -10,7 +13,6 @@ def test_crear_aged_brie():
 
 def test_to_string():
     cheese = Item("Aged Brie", 2, 0)
-    # the Java test just prints; we make sure __repr__ matches expected format
     print("toString() Aged Brie test:")
     print(cheese)
     assert str(cheese) == "Aged Brie, 2, 0"
