@@ -5,6 +5,7 @@
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
     "conventionalCommits.scopes": [
-        "Refactorizar clase NormalItem y Updateable "
+        "Refactorizar clase NormalItem y Updateable ",
+        "gilded_rose"
     ]
 }
