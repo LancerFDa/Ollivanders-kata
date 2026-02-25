@@ -11,21 +11,21 @@ class Item:
         self.sell_in = sell_in
         self.quality = quality
 
-    def setSellin(self):
+    def set_sellin(self):
         self.sell_in -= 1
 
     def __repr__(self):
         return "%s, %s, %s" % (self.name, self.sell_in, self.quality)
     
 class Updateable:
-    def updateQuality(self):
+    def update_quality(self):
         pass
 
 class NormalItem(Item, Updateable):
 
-    Item.setSellin
+    Item.set_sellin
 
-    def updateQuality(self):
+    def update_quality(self):
         if self.sell_in > 0:
             self.quality -= 1
         elif self.sell_in < 0:
@@ -33,9 +33,9 @@ class NormalItem(Item, Updateable):
 
 class AgedBrie(Item, Updateable):
 
-    Item.setSellin
+    Item.set_sellin
 
-    def updateQuality(self):
+    def update_quality(self):
         if self.sell_in > 0:
             self.quality += 1
         elif self.sell_in < 0:
